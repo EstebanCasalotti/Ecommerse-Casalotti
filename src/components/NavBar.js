@@ -1,5 +1,7 @@
+import {CartWidget} from './CartWidget'
 export const Title = () => {
-    return(
+    return<>
         <h1> Casalotti Ecommerse </h1>
-    )
+          <CartWidget />
+    </>
 }
