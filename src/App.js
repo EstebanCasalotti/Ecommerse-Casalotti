@@ -3,6 +3,7 @@ import './App.css';
 import {Title} from './components/NavBar'
 import {List} from './components/List'
 import {ItemListContainer} from './components/ItemListContainer'
+import {Counter} from './components/ItemCount'
 function App() {
   return (
     <div className="App">
@@ -12,6 +13,7 @@ function App() {
         <ItemListContainer>
           <h2> Bienvenidos! </h2>
         </ItemListContainer>
+        <Counter />
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>
