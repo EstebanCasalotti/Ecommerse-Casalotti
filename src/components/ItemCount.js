@@ -5,11 +5,13 @@ export const Counter = () => {
     const onAdd = () => {
             setCount(count + 1);
     
-    };
+};
     const onRemove = () => {
+        if(count > 0){
             setCount(count - 1);
+        }
     
-    };
+};
     return (
         <>
     
