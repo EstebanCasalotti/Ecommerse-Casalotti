@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import {Title} from './components/NavBar'
 import {List} from './components/List'
-import {ItemListContainer} from './components/ItemListContainer'
+import {Elementos, ItemListContainer} from './components/ItemListContainer'
 import {Counter} from './components/ItemCount'
 function App() {
   return (
@@ -14,8 +14,10 @@ function App() {
           <h2> Bienvenidos! </h2>
         </ItemListContainer>
         <Counter />
+        <Elementos />
 
-        <img src={logo} className="App-logo" alt="logo" />
+
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -26,12 +28,11 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
     </div>
   
   );
 }
-
 
 export default App;
