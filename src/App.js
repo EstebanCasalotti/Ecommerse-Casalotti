@@ -4,6 +4,7 @@ import {Title} from './components/NavBar'
 import {List} from './components/List'
 import {Elementos, ItemListContainer} from './components/ItemListContainer'
 import {Counter} from './components/ItemCount'
+import {ItemDetailConteiner} from './components/ItemDetailConteiner';
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
         </ItemListContainer>
         <Counter />
         <Elementos />
+        <ItemDetailConteiner />
 
 
         {/* <img src={logo} className="App-logo" alt="logo" />
