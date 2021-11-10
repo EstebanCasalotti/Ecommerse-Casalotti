@@ -19,6 +19,11 @@ export const Counter = () => {
         <label> {count} </label>
         <button onClick = {onAdd} > + </button>
         <button onClick = {onRemove} > - </button>
+        <Link to="/Cart">
+            <button type="button">
+               Finalizar compra
+             </button>
+        </Link>
     
         </>
 );
