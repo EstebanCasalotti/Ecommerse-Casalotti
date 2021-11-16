@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useState } from 'react';  
-import { Elementos } from '../ItemListContainer';
 
+const [cart, setCart ] = useState([]);
 
 export const CartContext = React.createContext();
 
@@ -21,7 +21,7 @@ export function ItemProvider({defaultValue = [], children}){
             alert('no se puede agreagr un elemento duplicado');
             return;
         }
-        Elementos([...setCache, obj]);
+        setCart([...setCache, obj]);
     }
 
     function deleteElement(obj){
