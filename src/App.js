@@ -18,14 +18,11 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" component = {<Home />}/>
+          <Route exact path="/" element = {<Home />}/>
+          <Route exact path="/ItemListConteiner" exact element = {<Elementos />}/>
         </Routes>
       </BrowserRouter>
     </>
-
-
-    
-  
   );
 }
 

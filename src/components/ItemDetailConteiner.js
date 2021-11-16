@@ -9,22 +9,45 @@ export function ItemDetailConteiner (){
 }
 
 const GetItem = () => {
+
+  const [controller, setController] = useState(false)
+
+  
+
     useEffect(() => {const promise = new Promise((resolve, reject)=>{
+
         setTimeout(()=>{
-            resolve(ItemDetail);
+
+            resolve(true);
+
         },2000);
+
       });
+
       promise.then(
+
         (result) => {
+
           console.log(result);
-          ItemDetail(result);
+
+          setController(result);
+
         },
+
         (error) => {
+
           console.log(error);
+
         }
+
       )},[])
+
       return(
+
         <div>
-            <ItemDetail />
+
+           { controller && <ItemDetail/>}
+
         </div>
-      )}
+
+      )} 
