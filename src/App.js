@@ -1,9 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import {Header} from './components/Header/Header'
 import { Home } from './components/Home';
 import {Title} from './components/NavBar'
 import {List} from './components/List'
-import {Elementos, ItemListContainer} from './components/ItemListContainer'
+import {Elementos, ItemListContainer, data} from './components/ItemListContainer'
 import {Counter} from './components/ItemCount'
 import {ItemDetailConteiner} from './components/ItemDetailConteiner';
 import {
@@ -14,16 +13,9 @@ import {
 } from "react-router-dom";
 import { ItemDetail } from './components/ItemDetail';
 function App() {
-  return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element = {<Home />}/>
-          <Route exact path="/ItemListConteiner" exact element = {<Elementos />}/>
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+
+  const {Items} = data;
+  return <div> <Header /> </div>
 }
 
 export default App;
