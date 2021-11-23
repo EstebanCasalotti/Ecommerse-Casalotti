@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
+import { useParams} from 'react-router-dom'
 export const ItemListContainer = (greeting) => {
   return(
       <h2>{greeting.Name}</h2>
   )
   
 };
-export const data = {
-  Items:[
+export const data =[
     { 
       id: '1',
       price: '100',
@@ -22,15 +22,25 @@ export const data = {
       price: '200',
       name: 'zapato',
       image:'https://media.istockphoto.com/photos/brown-leather-shoe-picture-id187310279?b=1&k=20&m=187310279&s=170667a&w=0&h=5Fc9XC5hfvpffZwfE-BzK6DcajqdN3sQjnPJa-Z0Rnk='
-    },]}
-const Producto = ({nombre, precio}) => {
-  return <>
-      <h1>{nombre}</h1>
-      <h1>Precio: {precio}</h1>
-    </>
+    }
+]
+const Producto = ({name, price, image}) => {
+  return(
+    <div className="card-img-top" style={{width: "18rem;"}}>
+          <img className='image' src={image} alt="..." />
+      <div className="card-body">
+        <h5 className="card-title">{name}</h5>
+        <p className="card-text">{price}</p>
+        <a href="#" className="btn btn-primary">Finalizar compra</a>
+      </div>
+  </div>
+
+  )
 }
 
 export const Elementos = () => {
+
+  const {ItemListContainerId} = useParams();
   const [productos, setProductos] = useState(null);
   useEffect(() => {const promise = new Promise((resolve, reject)=>{
     setTimeout(()=>{
@@ -48,7 +58,7 @@ export const Elementos = () => {
   );},[])
   return(
     <div className = "conteiner">
-      {productos?.map(producto => <Producto nombre={producto.name} precio={producto.price}/>)}
+      {productos?.map(producto => <Producto key={producto.id} name={producto.name} image={producto.image} price={producto.price}/>)}
     </div>
 )
 }
