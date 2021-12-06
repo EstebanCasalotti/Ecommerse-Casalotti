@@ -1,11 +1,11 @@
 import {CartWidget} from './CartWidget'
 import NavBar from './NavBar.css'
-import { Link, BrowserRouter} from 'react-router-dom'
+import { Link, BrowserRouter,Switch} from 'react-router-dom'
 export const Title = () => {
     return<>
         <header className= 'header'>
             <BrowserRouter>
-                        <Link to='/'className='logo'>
+                        <Link to="/" className='logo'>
                             Casalotti-Ecommerse
                         </Link>
             </BrowserRouter>
@@ -25,7 +25,7 @@ export const Title = () => {
                 </ul>
                 <ul>
                     <li>
-                        <Link to='/Cart' className='cart'><CartWidget /> </Link>
+                        <Link to='/Cart' className='cart'> <CartWidget /> </Link>
                     </li>
                 </ul>
                 </BrowserRouter>

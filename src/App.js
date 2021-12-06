@@ -10,18 +10,19 @@ function App() {
   return(
     <>
     <Title />
-
     <BrowserRouter>
     <Switch>
-    <Route exact path="/">
-    <Elementos />
+    <Route exact path="/Home" component={Home}>
+      </Route>
+      <Route exact path="/" component={Elementos}>
     </Route>
 
+    <Route exact path="/Elementos/:Name" component={Elementos}>
+    </Route>
 
-
-    <Route exact path="Home">
-      <Home/>
-      </Route>
+    <Route exact path="*">
+    <h1> Error pagina no encontrada </h1>
+    </Route>
     </Switch>
     </BrowserRouter>
     </>
